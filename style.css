@@ -1,0 +1,127 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    padding: 10px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    height: 40px;
+    border: 1px solid gainsboro;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+    background-color:darkslateblue;
+    color: white;
+    margin-bottom: 3rem;
+}
+nav span{
+    position: relative;
+}
+nav span::before{
+    content: ' ';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    background-color: whitesmoke;
+    transition: all 0.4s;
+}
+nav span:hover::before{
+    width: 100%;
+}
+nav span:hover{
+    cursor: pointer;
+}
+.main-div{
+    height: 100vh;
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color:slategrey;
+    color: white;
+}
+input{
+    width: 100%;
+    height: 30px;
+    /* margin-left: 10px; */
+    font-size: 16px;
+    color: darkcyan;
+}
+input:active{
+    color: black;
+    /* font-size: 24px; */
+}
+input:hover{
+    border: none;
+    border: 2px solid gray;
+    border-color: darkcyan;
+    /* padding: 0.2rem; */
+    /* padding: 2px; */
+    border-radius: 5px;
+}
+input::placeholder{
+    color: lightslategray;
+}
+.add{
+    width: 100%;
+    height: 30px;
+    /* margin-left: 10px; */
+    font-style: normal;
+    font-size: 17px;
+    /* color: white; */
+    /* background-color: darkslategray; */
+    /* border: none; */
+    margin-top: 1px;
+}
+.add:hover{
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+ul{
+    margin-left: 10px;
+}
+li{
+    padding: 10px;
+}
+.delete{
+    /* padding: 5px; */
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    margin-left: 8px;
+}
+.delete:hover{
+    color: white;
+    background-color: darkmagenta;
+    border: none;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+.delete:hover{
+    cursor: pointer;
+}
+.ul-li{
+    color:indigo;
+}
+.nested-ul{
+    display: none;
+    position: absolute;
+    background-color: darkslateblue;
+    /* transition: all 0.4s; */
+}
+.p-span{
+    position: relative;
+    transition: all 0.4s;
+}
+.p-span:hover .nested-ul{
+    display: block;
+}
